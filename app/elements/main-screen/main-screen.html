@@ -22,12 +22,9 @@
       </span>
 
       <div fit class="content">
-        <h1>Polymer Rocks!</h1>
         <core-pages id="pages" selected="0">
-          <div>Welcome!</div>
-          <div>You have selected "Android"</div>
-          <div>You have selected "Bug Report"</div>
-          <div>You have selected "Account"</div>
+          <home-page></home-page>
+          
         </core-pages>
       </div>
 
@@ -39,12 +36,16 @@
 
       Polymer("main-screen", {
         ready: function() {
-          this.pages = this.$.pages; 
+          this.pages = this.$.pages;
+          console.log(this.pages);
         },
         selectAction: function (e, detail) {
           if (detail.isSelected) {
             var selectedItem = detail.item;
-            this.pages.selected = selectedItem.attributes.num.nodeValue;
+            this.pages.selected = selectedItem.attributes.num.value;
+            // console.log(detail.item.attributes.label.value);
+            // var page = detail.item.attributes.label.value.split(" ").join('');
+            // history.pushState(null , "title", page);
           }
         }
       });
