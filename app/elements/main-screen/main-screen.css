@@ -1,0 +1,31 @@
+core-scaffold {
+    font-family: sans-serif;
+}
+
+core-toolbar {
+    background: #BDBDBD;
+    color: #000000;
+}
+
+core-header-panel {
+    background: #ECECEC;
+    color: #000000;
+}
+
+.content {
+    padding: 20px;
+}
+
+core-scaffold::shadow core-toolbar {
+    background: #50C684;
+    color: #000000;
+}
+
+core-scaffold::shadow core-header-panel {
+    background: #FFFEF4;
+    color: #212121;
+}
+
+span.tool{
+	position: static!important;
+}
